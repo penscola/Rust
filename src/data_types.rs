@@ -1,5 +1,10 @@
 use std::mem;
 
+fn foo_function() {
+    let y = 5;
+    println!("foo_function() is being called. Result is {}", y)
+}
+
 pub fn data_types() {
     // data types
     let bool_variable = true;
@@ -22,4 +27,11 @@ pub fn data_types() {
 
     println!("c={}, number={}, double_number={}, Unsigned number={}, my_string={}", 
     c, number, double_number, u_number, my_string);
+
+    // stack and heap
+    foo_function();
+    let stack = 10;
+    let heap = Box::new(stack);
+    println!("Stack={}, Heap={}", stack, heap);
+    println!("Size of stack {}, size of heap {}", mem::size_of_val(&stack), mem::size_of_val(&*heap))
 }

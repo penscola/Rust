@@ -19,3 +19,9 @@ Click [here](https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=h
 - Signed Integer `i8`, `i16`, `i32`,`i64`
 - Float-points `f32`, `f64`
 - String `&str`
+
+## Stack and Heap
+ - **Stack** - suitable for fixed-size data with predictable lifetimes, while **heap** is ideal for dynamic data with uncertain lifetimes.
+#### Pointer type
+- **usize**
+- **isize**
