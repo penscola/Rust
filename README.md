@@ -29,3 +29,7 @@ Click [here](https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=h
 ## Operators & Conditions
 - *Operator* -> `+`, `-`, `*`, `/`, `%`, `-=`, `+=`, `*=`
 - *Condition* -> `<`, `>`, `==`, `<=`, `>=`
+
+## Conditional statements
+- `if else` statement
+- `else if` statement
