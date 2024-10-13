@@ -29,9 +29,20 @@ pub fn data_types() {
     c, number, double_number, u_number, my_string);
 
     // stack and heap
-    foo_function();
-    let stack = 10;
+    let mut stack = 10;
     let heap = Box::new(stack);
     println!("Stack={}, Heap={}", stack, heap);
-    println!("Size of stack {}, size of heap {}", mem::size_of_val(&stack), mem::size_of_val(&*heap))
+    println!("Size of stack {}, size of heap {}", mem::size_of_val(&stack), mem::size_of_val(&*heap));
+
+    // scope and shadowing
+    foo_function();
+    stack = 21;
+    println!("c={}", c);
+    {
+        let scoped_var = 4;
+        println!("scoped_var = {}, stack = {}", scoped_var, stack);
+    }
+
+    let scoped_var = 15;
+    println!("Redecleared scoped_var={} and stack={}", scoped_var, stack);
 }
