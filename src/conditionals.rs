@@ -34,8 +34,27 @@ pub fn main2() {
         }
     }
 
+    // For Loop
     println!("Beginning of For loop");
     for x in 0..20 {
         println!("{}", x);
     }
+
+    // Match statment
+    println!("Beginning of Match statments");
+    let x = "Apple";
+    match x {
+        "Apple" => println!("Great brand!"),
+        "Linux" => println!("Open source!"),
+        _ => println!("Some other OS system"),
+    }
+
+    let area_code = 206;
+    let area = match area_code {
+        206 => "Seattle",
+        318 => "Louisana",
+        200..300 => "Washington state",
+        _ => "Invalid",
+    };
+    println!("The area for {} is {}", area_code, area)
 }

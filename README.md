@@ -37,3 +37,6 @@ Click [here](https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=h
 ## Loops
 - `while` loop
 - `for` loop
+
+## Match statements
+- `match` statement
