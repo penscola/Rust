@@ -1,7 +1,8 @@
-mod data_types;
+// mod data_types;
+mod conditionals;
 
 fn main() {
-    println!("Hello, world!");
-    data_types::data_types();
+    // data_types::data_types();
+    conditionals::main2();
 }
     
