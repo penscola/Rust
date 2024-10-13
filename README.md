@@ -25,3 +25,7 @@ Click [here](https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=h
 #### Pointer type
 - **usize**
 - **isize**
+
+## Operators & Conditions
+- *Operator* -> `+`, `-`, `*`, `/`, `%`, `-=`, `+=`, `*=`
+- *Condition* -> `<`, `>`, `==`, `<=`, `>=`

@@ -1,4 +1,5 @@
 use std::mem;
+use std;
 
 fn foo_function() {
     let y = 5;
@@ -45,4 +46,46 @@ pub fn data_types() {
 
     let scoped_var = 15;
     println!("Redecleared scoped_var={} and stack={}", scoped_var, stack);
+
+    // Operators
+    /*
+    Addition
+    Multiplication
+    Division 
+    Modulo
+    */
+    let number = 2;
+    let add_number = number + 5;
+    println!("Addition={}", add_number);
+
+    let multiply = number * 5;
+    println!("Multiplication={}", multiply);
+
+    let division = 8/2;
+    println!("Division={}", division);
+
+    let modulo = 5%2;
+    println!("Modulo={}", modulo);
+
+    let mut another_number = 7;
+    another_number -= 2;
+    println!("Operator={}", another_number);
+    another_number += 5;
+    println!("Operator={}", another_number);
+    another_number *= 5;
+    println!("Operator={}", another_number);
+    another_number /= 5;
+    println!("Operator={}", another_number);
+
+    let cubed = i32::pow(number, 3);
+    println!("Number raised to the power of 3 = {}", cubed);
+
+    let cubed_times_pi = 8.0 * std::f64::consts::PI;
+    println!("cubed * PI = {}", cubed_times_pi);
+
+    let mut bool_result = 5 < 6;
+    println!("bool_result = {}", bool_result);
+
+    bool_result = 5 == 6;
+    println!("bool_result = {}", bool_result)
 }
