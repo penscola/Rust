@@ -40,3 +40,24 @@ Click [here](https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=h
 
 ## Match statements
 - `match` statement
+
+## Struct & Enumaration
+- *Struct* 
+```
+struct Student {
+    age:i32,
+    mark:i32,
+}
+```
+
+- *enum*
+```
+#[derive(Debug)]
+enum Language {
+    Java,
+    Scala,
+    Rust,
+    C,
+    Swift,
+}
+```
