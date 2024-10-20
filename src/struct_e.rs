@@ -7,9 +7,6 @@ struct Student {
 enum Language {
     Java,
     Scala,
-    Rust,
-    C,
-    Swift,
 }
 
 pub fn main() {
@@ -20,5 +17,24 @@ pub fn main() {
     println!("Information gathered: {} - {}", my_age, my_mark);
 
     let first_languages = Language::Java;
-    println!("{:?}", first_languages)
+    println!("{:?}", first_languages);
+
+    let second_langauge = Language::Scala;
+    println!("{:?}", second_langauge);
+
+    // Option<T>
+    let number = Some(7);
+    let letter: Option<i32> = None;
+
+    if let Some(i) = number {
+        println!("Matched {:?}", i);
+    } else {
+        println!("Didn;t matched a number.");
+    }
+
+    if let Some(i) = letter {
+        println!("Matched {:?}", i);
+    } else {
+        println!("Didn;t matched a number.");
+    }
 }

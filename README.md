@@ -61,3 +61,8 @@ enum Language {
     Swift,
 }
 ```
+
+## Option<T>
+- It has two variance
+1. **None** ==> Absence of a value or failure of processing
+2. **Some(v)** ==> a value with type "T"
