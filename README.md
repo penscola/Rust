@@ -65,4 +65,10 @@ enum Language {
 ## Option<T>
 - It has two variance
 1. **None** ==> Absence of a value or failure of processing
+```
+let letter: Option<i32> = None;
+```
 2. **Some(v)** ==> a value with type "T"
+```
+let number = Some(7);
+```

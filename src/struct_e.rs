@@ -9,6 +9,23 @@ enum Language {
     Scala,
 }
 
+fn checked_division(dividend:i32, divisor:i32) -> Option<i32> {
+    if divisor == 0{
+        None
+    } else {
+        Some(dividend/dividend)
+    }
+}
+
+fn try_division(dividend:i32, divisor:i32) {
+    match checked_division(dividend, divisor) {
+        None => println!("{}/{} failed!", dividend, divisor),
+        Some(quotient) => {
+            println!("{}/{} = {}", dividend, divisor, quotient)
+        }
+    }
+}
+
 pub fn main() {
     let student:Student = Student { age:23, mark: 17 };
     println!("Student information: age {}, mark: {}", student.age, student.mark);
@@ -24,7 +41,7 @@ pub fn main() {
 
     // Option<T>
     let number = Some(7);
-    let letter: Option<i32> = None;
+    let letter: Option<i32> = Some(5);
 
     if let Some(i) = number {
         println!("Matched {:?}", i);
@@ -37,4 +54,8 @@ pub fn main() {
     } else {
         println!("Didn;t matched a number.");
     }
+
+    // call Option<T> functions
+    try_division(4, 3);
+    try_division(4, 0);
 }
