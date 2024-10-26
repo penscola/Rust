@@ -72,3 +72,35 @@ let letter: Option<i32> = None;
 ```
 let number = Some(7);
 ```
+
+## Arrays
+- Fixed list
+- Another way to have a collection of multiple values 
+- Must have the same type
+- Separated by a comma
+- Have fixed length
+```
+fn main() {
+    let a: [i32; 6] = [1,2,3,4,5,6];
+}
+```
+
+**Accessing Array Elements**
+```
+fn main() {
+    let a = [1,2,3,4,5];
+
+    let first = a[0];
+    let second = a[1];
+}
+```
+**Iterating through arrays**
+```
+for i in a.iter() {
+    println!("i = {}", i);
+}
+```
+**Creating fixed arrays**
+```
+let array_two = [4;5];
+```

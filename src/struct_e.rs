@@ -58,4 +58,25 @@ pub fn main() {
     // call Option<T> functions
     try_division(4, 3);
     try_division(4, 0);
+
+    // Arrays
+    let my_array = [1,2,3];
+    println!("Here are elements of my array: {:?}", my_array);
+    let mut my_mutable_array = [1,2,3];
+    println!("Here are elements of my mutable array: {:?}", my_mutable_array);
+    println!("Element one = {}", my_array[2]);
+
+    // looping through arrays
+    let mut index = 0;
+    for i in my_array.iter() {
+        println!("@ index = {}, i = {}", index, i);
+        index = index + 1;
+    }
+
+    // creating fixed arrays
+    let array_two = [4;5];
+    println!("{:?}", array_two);
+    for i in 0..array_two.len() {
+        println!("{}", array_two[i]);
+    }
 }
