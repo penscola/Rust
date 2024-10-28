@@ -104,3 +104,24 @@ for i in a.iter() {
 ```
 let array_two = [4;5];
 ```
+
+## Vector(Vect<T>)
+- allow you to store more than one value in a single data structure that puts all the values next to each other in memory
+```
+    let v = vec![1, 2, 3];
+```
+
+**Updating a vector**
+```
+    let mut v = Vec::new();
+
+    v.push(5);
+    v.push(6);
+    v.push(7);
+    v.push(8);
+```
+**Removing elements in an array**
+```
+    let v = vec![1, 2, 3];
+    v.remove(0);
+```

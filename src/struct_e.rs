@@ -79,4 +79,15 @@ pub fn main() {
     for i in 0..array_two.len() {
         println!("{}", array_two[i]);
     }
+
+    let mut my_vector = vec![1,2,3,4,5];
+    let another_vector = vec![0;10];
+    println!("The 4th element  of my first vector is {}", my_vector[3]);
+    my_vector.push(0);
+    println!("The last element added is {} and full vector is {:?}", my_vector[5], my_vector);
+    my_vector.remove(5);
+    println!("My vector has one less element: {:?}", my_vector);
+    for i in my_vector {
+        println!("Element = {}", i);
+    }
 }
