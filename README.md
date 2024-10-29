@@ -105,7 +105,7 @@ for i in a.iter() {
 let array_two = [4;5];
 ```
 
-## Vector(Vect<T>)
+## Vector(Vect\<T>\)
 - allow you to store more than one value in a single data structure that puts all the values next to each other in memory
 ```
     let v = vec![1, 2, 3];
@@ -124,4 +124,25 @@ let array_two = [4;5];
 ```
     let v = vec![1, 2, 3];
     v.remove(0);
+```
+## String
+**Slicing**
+
+*Slices* let you reference a contiguous sequence of elements in a collection rather than the whole collection.
+<br>
+[image](images/r7bwet59.png)
+<br>
+```
+let s = String::from("hello");
+
+let slice = &s[0..2];
+let slice = &s[..2];
+```
+**Concatenation**
+
+```
+let hello = "Hello ".to_string();
+let world = "world.".to_string();
+let hello_world = hello + &world;
+println!("{}", hello_world);
 ```
