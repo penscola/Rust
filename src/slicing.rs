@@ -30,4 +30,17 @@ pub fn main(){
     let multi_string = "Hey
     Brett";
     println!("{}",multi_string);
+
+    // Challanges
+    let first_string = "multi
+    lines
+    string";
+    let second_string = " simple single line string";
+    // method 1
+    let concat1 = first_string.to_string() + &second_string;
+    println!("{}", concat1);
+    // method 2
+    let mut concat2 = "line?".to_string() + &second_string;
+    concat2.push_str(&second_string);
+    println!("{}", concat2);
 }
