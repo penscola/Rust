@@ -138,6 +138,7 @@ let s = String::from("hello");
 let slice = &s[0..2];
 let slice = &s[..2];
 ```
+
 **Concatenation**
 
 ```
@@ -145,4 +146,25 @@ let hello = "Hello ".to_string();
 let world = "world.".to_string();
 let hello_world = hello + &world;
 println!("{}", hello_world);
+```
+
+## Tuples 
+ - general way of grouping together a number of values with a variety of types into one compound type.
+ - Have a fixed length, they cannot grow or shrink.
+ ```
+ fn main() {
+    let tup: (i32, f64, u8) = (500, 6.4, 1);
+}
+```
+
+## Generics(Polymorphism/Templates)
+- Generic programming allows programmers to write general algorithms that work with arbitrary types.
+```
+struct Point {
+    x:f32,
+    y:f32,
+}
+
+let point: Point = Point { x: 0.3, y: 0.4 };
+println!("point coordinates: ({}, {})", point.x, point.y);
 ```

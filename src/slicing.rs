@@ -1,3 +1,11 @@
+#[derive(Debug)]
+struct GenericStruct<T>(T);
+
+struct Point {
+    x:f32,
+    y:f32,
+}
+
 pub fn main(){
     println!("--- Slicing ---");
 
@@ -43,4 +51,19 @@ pub fn main(){
     let mut concat2 = "line?".to_string() + &second_string;
     concat2.push_str(&second_string);
     println!("{}", concat2);
+
+    // Tuples
+    println!("--- Tuples ---");
+    let tuple = ("Member1", "Member2", "Member3");
+    println!("First element of tuple: {}", tuple.0);
+
+    // Generics
+    let generic_var: GenericStruct<char> = GenericStruct('a');
+    println!("first generic: {:?}", generic_var);
+    let another_generic: GenericStruct<bool> = GenericStruct(true);
+    println!("second generic: {:?}", another_generic);
+
+    let point: Point = Point { x: 0.3, y: 0.4 };
+    println!("point coordinates: ({}, {})", point.x, point.y);
+
 }
