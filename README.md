@@ -41,7 +41,7 @@ Click [here](https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=h
 ## Match statements
 - `match` statement
 
-## Struct & Enumaration
+## Struct & Enumeration
 - *Struct* 
 ```
 struct Student {
@@ -105,7 +105,7 @@ for i in a.iter() {
 let array_two = [4;5];
 ```
 
-## Vector(Vect\<T>\)
+## Vector(Vec\<T>\)
 - allow you to store more than one value in a single data structure that puts all the values next to each other in memory
 ```
     let v = vec![1, 2, 3];
@@ -167,4 +167,37 @@ struct Point {
 
 let point: Point = Point { x: 0.3, y: 0.4 };
 println!("point coordinates: ({}, {})", point.x, point.y);
+```
+## Ownership
+- It enables Rust to make memory safety guarantees without needing a garbage collector.
+
+**Ownership Rules**
+- Each value in Rust has an owner.
+- There can only be one owner at a time.
+- When the owner goes out of scope, the value will be dropped.
+
+**No Ownership Change**
+```rust
+pub fn main() {
+    println!("-- No Ownership change --");
+
+    let data = 5;
+    let data2 = data;
+    println!("Data: {}", data);
+    println!("Data2: {}", data2);
+    no_ownership_change(data);
+}
+```
+
+**Ownership Change**
+```rust
+pub fn main() {
+    println!("-- Ownership Change --");
+
+    let v = vec![1,2,3];
+    println!("Data: {}", v[0]);
+    let v2 = v; /* Ownership movement*/
+    println!("Data:{}", v2[0]);
+    //println!("Data:{}", v[0]);
+}
 ```
