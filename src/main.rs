@@ -3,7 +3,8 @@
 // mod struct_e;
 // mod slicing;
 // mod function_closure;
-mod ownership;
+// mod ownership;
+mod borrowing;
 
 fn main() {
     // data_types::data_types();
@@ -11,6 +12,7 @@ fn main() {
     // struct_e::main()
     // slicing::main();
     // function_closure::main();
-    ownership::main();
+    // ownership::main();
+    borrowing::main();
 }
     

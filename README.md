@@ -201,3 +201,33 @@ pub fn main() {
     //println!("Data:{}", v[0]);
 }
 ```
+**Reference(`&`)** -> way to access without taking ownership of it.
+- Immutable References
+    - created using `&`.
+    - Allow read-only access to a resource.
+    - Can e created multiple times.
+    ```rust
+    fn main() {
+        let vec = vec![10,11];
+        for i in &vec {
+            println!("{}", i)
+        }
+      }
+  ```
+- Mutable Reference
+    - Created using `&mut` symbol.
+    - Allow read & write access
+    - There can only be one mutable reference to a resource to any given time.
+    ```rust
+    fn main() {
+      let mut vec = vec![10,11];
+        let first = &mut vec[0];
+        *first = 6; //dereferencing
+        println!("{:?}", vec);
+  }
+  ```
+
+**Rules of borrowing**
+- Each reference can only have one mutable reference.
+- Reference must always be valid.
+- A mutable reference cannot exist at the same time as any other reference.
