@@ -216,7 +216,7 @@ pub fn main() {
   ```
 - Mutable Reference
     - Created using `&mut` symbol.
-    - Allow read & write access
+    - Allow read & write access 
     - There can only be one mutable reference to a resource to any given time.
     ```rust
     fn main() {
@@ -231,3 +231,10 @@ pub fn main() {
 - Each reference can only have one mutable reference.
 - Reference must always be valid.
 - A mutable reference cannot exist at the same time as any other reference.
+
+## Crates
+- Crate is a compilation unit.
+ - creating crate
+```commandline
+cargo new my-new-crate --lib
+```
