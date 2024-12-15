@@ -12,11 +12,29 @@ Click [here](https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=h
 ### Compiling Rust file
 - Compile rust file to be executable `rustc main.rs`
 
+## Variables
+- **Assigned** using `let` keyword
+- **Print** to standard output by `print()` or `println!()`
+- **Scope** of a variable defined by the **block of code** in which it is declared.
+- **Function** is a named block of code that is **reusable**
+- **Shadowing** allows a variable to be **re-declared** in the same scope with the same name.
+
 ## Data Types
 - Boolean `bool`
 - Character `char`
-- Unsigned Integer `u8`, `u16`, `u32`, `u64`
-- Signed Integer `i8`, `i16`, `i32`,`i64`
+- Number - Integer Types
+  - Unsigned Integer -> Can represent both **positive** and **negative** integers
+  - Signed Integer -> always positive
+
+| Length | Signed | Unsigned |
+|--------|--------|----------|
+| 8-bit  | i8     | u8       |
+| 16-bit | i16    | u16      |
+| 32-bit | i32    | u32      |
+| 64-bit | i64    | u64      |
+| 128-it | i28    | u128     |
+| arch   | isize  | usize    |
+      
 - Float-points `f32`, `f64`
 - String `&str`
 
