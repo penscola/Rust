@@ -50,11 +50,102 @@ Click [here](https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=h
 
 ## Conditional statements
 - `if else` statement
+  ```rust
+  fn check_for_even_numbers(num:i32) {
+    if (num % 2) == 0 {
+      true
+    } else { 
+      false
+    };
+  }
+  ```
 - `else if` statement
+  ```rust
+  fn main() {
+    let n = 5;
+
+    if n < 0 {
+        print!("{} is negative", n);
+    } else if n > 0 {
+        print!("{} is positive", n);
+    } else {
+        print!("{} is zero", n);
+    }
+  }
+  ```
 
 ## Loops
-- `while` loop
-- `for` loop
+- `Loop`
+  ```rust
+    fn main() {
+      let mut count = 0u32;
+  
+      println!("Let's count until infinity!");
+  
+      // Infinite loop
+      loop {
+          count += 1;
+  
+          if count == 3 {
+              println!("three");
+  
+              // Skip the rest of this iteration
+              continue;
+          }
+  
+          println!("{}", count);
+  
+          if count == 5 {
+              println!("OK, that's enough");
+  
+              // Exit this loop
+              break;
+          }
+      }
+  }
+  ```
+  - `while` loop
+    ```rust
+    fn main() {
+      // A counter variable
+      let mut n = 1;
+
+      // Loop while `n` is less than 101
+      while n < 101 {
+          if n % 15 == 0 {
+              println!("fizzbuzz");
+          } else if n % 3 == 0 {
+              println!("fizz");
+          } else if n % 5 == 0 {
+              println!("buzz");
+          } else {
+              println!("{}", n);
+          }
+
+          // Increment counter
+          n += 1;
+      }
+    } 
+    ```
+- `for` loop 
+
+  - For and Range
+  ```rust
+  pub fn sum_of_even(start: i32, end: i32) -> i32 {
+    if start >= end {
+        0
+    } else { 
+        let sum = 0;
+        for i in start..end {
+            if i % 2 == 0 {
+                sum += i;
+            }
+        } 
+        sum
+    }
+  }
+  ```
+  - for and iterators
 
 ## Match statements
 - `match` statement
