@@ -347,3 +347,6 @@ pub fn main() {
 ```commandline
 cargo new my-new-crate --lib
 ```
+## HashMap
+- Where vectors store values by an integer index, `HashMap` S store values by key.
+- `HashMap` keys can be booleans, integers, strings, or any other type that implements the `Eq` and `Hash` traits.
