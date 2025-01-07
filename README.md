@@ -350,3 +350,12 @@ cargo new my-new-crate --lib
 ## HashMap
 - Where vectors store values by an integer index, `HashMap` S store values by key.
 - `HashMap` keys can be booleans, integers, strings, or any other type that implements the `Eq` and `Hash` traits.
+
+**Requirements of HashMap key**
+Any type that implements the `Eq` and `Hash` traits can be a key in `HashMap`. This includes:
+
+- `bool` (though not very useful since there is only two possible keys)
+- `int`, `uint`, and all variations thereof 
+- `String` and `&str` (tips: you can have a HashMap keyed by String and call .get() with an &str)
+
+Note that f32 and f64 do not implement Hash, likely because floating-point precision errors would make using them as hashmap keys horribly error-prone.
