@@ -2,6 +2,7 @@ use crate::area::area_rect::area_rectangle;
 
 mod area;
 
+#[derive(Debug)]
 struct Rectangle {
     width: u32,
     height: u32
@@ -14,4 +15,5 @@ fn main() {
     };
 
     println!("the area of the Rectangle is {} square pixels", area_rectangle(&rect1));
+    println!("{rect1:#?}");
 }
