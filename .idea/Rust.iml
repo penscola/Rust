@@ -11,6 +11,9 @@
       <excludeFolder url="file://$MODULE_DIR$/project/changecase/target" />
       <excludeFolder url="file://$MODULE_DIR$/project/rectangles/target" />
       <excludeFolder url="file://$MODULE_DIR$/src/math/target" />
+      <excludePattern pattern="Cargo.lock" />
+      <excludePattern pattern="*.pdb" />
+      <excludePattern pattern=".vscode" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
