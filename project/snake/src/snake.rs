@@ -8,6 +8,7 @@ use crate::draw;
 const SNAKE_COLOR: Color = [0.00, 0.80, 0.00, 1.0];
 
 #[derive(Copy, Clone)]
+#[derive(PartialEq)]
 pub enum Direction {
     Up,
     Down,
