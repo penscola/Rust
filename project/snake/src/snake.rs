@@ -2,18 +2,15 @@ use std::collections::LinkedList;
 use piston_window::{Context, G2d};
 use piston_window::types::Color;
 
-use draw::draw_block;
-use crate::draw;
+use crate::draw::draw_block;
 
 const SNAKE_COLOR: Color = [0.00, 0.80, 0.00, 1.0];
-
-#[derive(Copy, Clone)]
-#[derive(PartialEq)]
+#[derive(Copy, Clone, PartialEq)]
 pub enum Direction {
     Up,
     Down,
-    Right,
     Left,
+    Right,
 }
 
 impl Direction {
@@ -21,16 +18,15 @@ impl Direction {
         match *self {
             Direction::Up => Direction::Down,
             Direction::Down => Direction::Up,
-            Direction::Right => Direction::Left,
             Direction::Left => Direction::Right,
+            Direction::Right => Direction::Left,
         }
     }
 }
-
-#[derive(Debug, Clone, PartialEq)]
+#[derive(Debug, Clone)]
 struct Block {
     x: i32,
-    y: i32
+    y: i32,
 }
 
 pub struct Snake {
@@ -52,7 +48,7 @@ impl Snake {
         });
         body.push_back(Block {
             x,
-            y
+            y,
         });
 
         Snake {
@@ -120,8 +116,8 @@ impl Snake {
         match moving_dir {
             Direction::Up => (head_x, head_y - 1),
             Direction::Down => (head_x, head_y + 1),
-            Direction::Right => (head_x - 1, head_y),
-            Direction::Left => (head_x + 1, head_y),
+            Direction::Left => (head_x - 1, head_y),
+            Direction::Right => (head_x + 1, head_y),
         }
     }
 
@@ -139,9 +135,9 @@ impl Snake {
 
             ch += 1;
             if ch == self.body.len() - 1 {
-                break
+                break;
             }
         }
-        return false;
+        false
     }
 }
