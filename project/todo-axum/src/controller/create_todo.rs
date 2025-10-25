@@ -1,6 +1,5 @@
-use axum::{extract::State, Json};
-use axum::http::StatusCode;
-use axum::response::IntoResponse;
+use axum::{Json, extract::State, http::StatusCode, response::IntoResponse};
+
 use crate::types::{Db, Todo};
 
 pub async fn create_todo(State(db): State<Db>, Json(payload): Json<Todo>) -> impl IntoResponse {
@@ -21,7 +20,8 @@ pub async fn create_todo(State(db): State<Db>, Json(payload): Json<Todo>) -> imp
     statement.bind((1, payload.task.as_str())).unwrap();
     statement.next().unwrap();
 
-    (StatusCode::CREATED,
-     Json(serde_json::json!({"message": "Todo created successfully!"})),
-    );
+    (
+        StatusCode::CREATED,
+        Json(serde_json::json!({"message": "Todo created successfully"})),
+    )
 }
